@@ -13,6 +13,7 @@ const HomePage = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-6 text-yellow-200 leading-tight">
           Empowering Companies with the Right Talent
         </h2>
+
         <div>
           <img src="/assets/dashboard.png" alt="" />
         </div>
@@ -21,13 +22,23 @@ const HomePage = () => {
           We specialize in connecting businesses with skilled professionals
           tailored to your specific industry needs.
         </p>
+
         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-          <button className="bg-yellow-200 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-200 transition w-full sm:w-auto">
+          {/* Request Employees */}
+          <a
+            href="mailto:support@bansalconsultancy.in?subject=Request%20for%20Employees&body=Hello%2C%20we%20are%20looking%20to%20hire%20employees%20for%20our%20company.%20Please%20get%20in%20touch%20with%20us."
+            className="bg-yellow-200 text-black font-semibold px-6 py-3 rounded-full hover:bg-yellow-200 transition w-full sm:w-auto"
+          >
             Request Employees
-          </button>
-          <button className="border border-yellow-200 text-yellow-200 px-6 py-3 rounded-full hover:bg-yellow-200 hover:text-black transition w-full sm:w-auto">
+          </a>
+
+          {/* Submit Resume */}
+          <a
+            href="mailto:support@bansalconsultancy.in?subject=Resume%20Submission&body=Hello%2C%20I%20would%20like%20to%20submit%20my%20resume%20for%20a%20job%20opportunity.%20Please%20find%20my%20resume%20attached."
+            className="border border-yellow-200 text-yellow-200 px-6 py-3 rounded-full hover:bg-yellow-200 hover:text-black transition w-full sm:w-auto"
+          >
             Submit Resume
-          </button>
+          </a>
         </div>
       </section>
 
@@ -83,22 +94,22 @@ const HomePage = () => {
           ].map((service, index) => (
             <Link to="/Contact">
               <div
-              key={index}
-              className="bg-gray-800 p-6 rounded-xl shadow hover:shadow-yellow-200/40 hover:scale-105 transition duration-300"
-            >
-              <img
-                src={`/assets/IT${index}.png`}
-                alt={service}
-                className="w-14 h-14 mb-4 object-contain"
-              />
-              <h4 className="text-lg sm:text-xl font-semibold mb-2 text-yellow-200">
-                {service}
-              </h4>
-              <p className="text-sm sm:text-base text-gray-300">
-                We deliver qualified {service.toLowerCase()} tailored to your
-                project or business goals.
-              </p>
-            </div>
+                key={index}
+                className="bg-gray-800 p-6 rounded-xl shadow hover:shadow-yellow-200/40 hover:scale-105 transition duration-300"
+              >
+                <img
+                  src={`/assets/IT${index}.png`}
+                  alt={service}
+                  className="w-14 h-14 mb-4 object-contain"
+                />
+                <h4 className="text-lg sm:text-xl font-semibold mb-2 text-yellow-200">
+                  {service}
+                </h4>
+                <p className="text-sm sm:text-base text-gray-300">
+                  We deliver qualified {service.toLowerCase()} tailored to your
+                  project or business goals.
+                </p>
+              </div>
             </Link>
           ))}
         </div>
@@ -168,9 +179,6 @@ const HomePage = () => {
                 <p className="text-sm text-gray-200">{item.desc}</p>
               </div>
             </div>
-          
-
-
           ))}
         </div>
       </section>

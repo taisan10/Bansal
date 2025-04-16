@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import AboutCard from "../Components/homepage/AboutUs";
 import QnASection from "../Components/homepage/QnA";
 import TestimonialSection from "../Components/homepage/TestimonialSection";
-import Footer from "../Components/homepage/Footer";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
@@ -81,7 +81,8 @@ const HomePage = () => {
             "Healthcare & Nursing",
             "Education & Training",
           ].map((service, index) => (
-            <div
+            <Link to="/Contact">
+              <div
               key={index}
               className="bg-gray-800 p-6 rounded-xl shadow hover:shadow-yellow-200/40 hover:scale-105 transition duration-300"
             >
@@ -98,6 +99,7 @@ const HomePage = () => {
                 project or business goals.
               </p>
             </div>
+            </Link>
           ))}
         </div>
       </section>

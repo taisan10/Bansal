@@ -34,7 +34,7 @@ const HomePage = () => {
 
           {/* Submit Resume */}
           <a
-            href="mailto:support@bansalconsultancy.in?subject=Resume%20Submission&body=Hello%2C%20I%20would%20like%20to%20submit%20my%20resume%20for%20a%20job%20opportunity.%20Please%20find%20my%20resume%20attached."
+            href="mailto:support@bansalconsultancy.in?subject=Resume%20Submission&body=Hello%2C%20I%20would%20like%20to%20submit%20my%20resume%20for%20a%20job%20opportunity.%20Here%20is%20my%20resume."
             className="border border-yellow-200 text-yellow-200 px-6 py-3 rounded-full hover:bg-yellow-200 hover:text-black transition w-full sm:w-auto"
           >
             Submit Resume
